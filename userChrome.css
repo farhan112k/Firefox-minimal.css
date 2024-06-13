@@ -1,0 +1,160 @@
+/* Base color for the theme, dependent on whether it's a light theme or not */
+@media (prefers-color-scheme: black) {
+    :root {
+        --accent-color: #000000;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent-color: #FAFAFC;
+    }
+}
+/*====== Aesthetics ======*/
+
+#navigator-toolbox {border-bottom: none !important;}
+#titlebar {background: var(--accent-color) !important;}
+
+/* Sets the toolbar color */
+toolbar#nav-bar {background: var(--accent-color) !important; box-shadow: none !important;}
+
+/*! this overlap with MY OVERRIDE */
+/* Sets the URL bar color */ 
+/* #urlbar {
+    background: var(--accent-color) !important;
+}
+
+#urlbar-background {
+    background: var(--accent-color) !important;
+    border: none !important;
+}
+
+#urlbar-input-container {
+    border: none !important;
+} */
+/* ! =============================== */
+
+
+/*====== UI Settings ======*/
+
+:root {--navbarWidth: 500px;} /* Set width of navbar */
+
+/* If the window is wider than 1000px, use flex layout */
+@media (min-width: 1000px) {
+    #navigator-toolbox {display: flex;flex-direction: row;flex-wrap: wrap;}
+
+    /*  Url bar  */
+    #nav-bar {order: 1;width: var(--navbarWidth);}
+
+    /* Tab bar */
+    #titlebar {order: 2;width: calc(100vw - var(--navbarWidth) - 1px);}
+
+    /* Bookmarks bar */
+    #PersonalToolbar {
+        order: 3;
+        width: 100%;
+    }
+    
+    /* Fix urlbar sometimes being misaligned */
+    :root[uidensity="compact"] #urlbar {--urlbar-toolbar-height: 39.60px !important;}
+    :root[uidensity="touch"] #urlbar {--urlbar-toolbar-height: 49.00px !important;}
+}
+
+/*====== Simplifying interface ======*/
+
+/* Autohide back button when disabled */
+#back-button, #forward-button {
+    transform: scale(1, 1) !important;
+    transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
+}
+
+#back-button[disabled="true"], #forward-button[disabled="true"] {
+    margin-left: -34px !important;
+    opacity: 0 !important;
+    transform: scale(0.8, 0.8) !important;
+    pointer-events: none !important;
+}
+
+/* Remove UI elements */
+#identity-box, /* Site information */
+#tracking-protection-icon-container, /* Shield icon */
+#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
+#urlbar-go-button, /* Search URL magnifying glass */
+#alltabs-button, /* Menu to display all tabs at the end of tabs bar */
+.titlebar-buttonbox-container /* Minimize, maximize, and close buttons */ {
+    display: none !important;
+}
+
+#nav-bar {box-shadow: none !important;}
+
+
+/* Remove "padding" left and right from tabs */
+.titlebar-spacer {display: none !important;}
+
+/* Fix URL bar overlapping elements */
+#urlbar-container {min-width: initial !important;}
+
+/* Remove gap after pinned tabs */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+> #tabbrowser-arrowscrollbox
+> .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0 !important;
+}
+
+/* Hide the hamburger menu */
+#PanelUI-menu-button {padding: 0px !important; }
+#PanelUI-menu-button .toolbarbutton-icon {width: 1px !important; }
+#PanelUI-menu-button .toolbarbutton-badge-stack {padding: 0px !important; }
+
+
+/* ========================= */
+/*****  my override *****/
+/* ========================= */
+
+/*  Removes urlbar border/background  */
+#urlbar-background{border: none !important; outline: none !important; transition: .15s !important;}
+
+/*  Removes the background from the urlbar while not in use  */
+#urlbar:not(:hover):not([breakout][breakout-extend])>#urlbar-background {box-shadow: none!important; background: #0000 !important}
+
+/*  Cool animation on tab/bookmark icons  */
+.tabbrowser-tab:not([pinned]):not([selected]) .bookmark-item .toolbarbutton-icon{opacity: 0!important; transition: .15s !important; width: 0!important; padding-left: 16px!important}
+.tabbrowser-tab:not([pinned]):hover .bookmark-item:hover .toolbarbutton-icon{opacity: 100!important; transition: .15s !important; display: inline-block!important; width: 16px!important; padding-left: 0!important}
+.tabbrowser-tab:not([hover]) .bookmark-item:not([hover]) .toolbarbutton-icon{padding-left: 0!important}
+
+/*  X-button on the tabs  */
+.tabbrowser-tab:not(:hover) .tab-close-button{opacity: 0% !important; transition: .3s !important; display: -moz-box !important;}
+.tab-close-button[selected]:not(:hover){opacity: 45% !important; transition: .3s !important; display: -moz-box !important;}
+.tabbrowser-tab:hover .tab-close-button{opacity: 50%; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+.tab-close-button:hover{opacity: 100% !important; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+.tab-close-button[selected]:hover{opacity: 100% !important; transition: .3s !important; background: none !important; cursor: pointer; display: -moz-box !important;}
+
+/*  Navbar buttons order  */
+/* #nav-bar{direction: rtl;} 
+#urlbar-container, #customizationui-widget-panel{direction: ltr !important;}
+#forward-button{order: -1 !important;}
+#back-button{padding-right: 0px !important;} 
+#forward-button{padding-right: 7px !important;} */
+
+
+/*  Context Menu Item Remove */
+#context-openlinkprivate,
+#context-openlink,
+#context-takescreenshot, /* don't know why this need to #conextseperator-4 to work */
+#context-sendpagetodevice,
+#context-selectall,
+#context-setDesktopBackground,
+#contextseperator-4,
+#context-sendimage,
+#context-viewimageinfo,
+#context-inspect-a11y{
+ display:none!important;
+}
+
+/*  Drop menus  */
+[position="bottomright topright"]{--panel-border-radius: 0 5px 5px 5px!important}
+[position="bottomleft topleft"]{--panel-border-radius: 5px 0 5px 5px!important}
+[part="content"]{border: none !important;}
+.toolbarbutton-1[open]{--toolbarbutton-border-radius: 4px 4px 0 0!important;}
+
+[class*="identity-color"] > * > * .tab-context-line{border-radius: 0 0 5px 5px !important}  /*  Identity-color  */
