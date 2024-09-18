@@ -1,4 +1,9 @@
-![ScreenShot](img.jpg)
+<p align="center">
+<img src="./scrennshots/img0.png" alt="ScreenShot"/>
+<img src="./scrennshots/img1.jpg" alt="ScreenShot of Floating navbar"/>
+<img src="./scrennshots/img2.jpg" alt="ScreenShot of media icon in tab" />
+</p>
+
 
 # Firefox-minimal.css
 
