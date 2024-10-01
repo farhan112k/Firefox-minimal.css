@@ -16,7 +16,9 @@ Forgot most of them, what make the difference from other
  - Now playing media icon adjust, shows along favicon
  - Floating navbar in center
 
-> Code is badly formated 
+### Known Issues
+- dark and light mode doesn't work. [#2](https://github.com/farhanspace/Firefox-minimal.css/issues/2)
+- after 132.b01 update the newtab plus icon disappear. [#1](https://github.com/farhanspace/Firefox-minimal.css/issues/1)
 
  ## Installing
 Firstly enable the option `toolkit.legacyUserProfileCustomizations.stylesheets` from your `about:config` or `user.js` file.
