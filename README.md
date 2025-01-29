@@ -1,4 +1,7 @@
+# I have move to another userChrome, which doesn't have one line style minimal interface. So this repo may not update anytime soon. if i have time and look into it.
+
 <p align="center">
+ 
 <img src="./scrennshots/img0.png" alt="ScreenShot"/>
 <img src="./scrennshots/img1.jpg" alt="ScreenShot of Floating navbar"/>
 <img src="./scrennshots/img2.jpg" alt="ScreenShot of media icon in tab" />
