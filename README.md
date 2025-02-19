@@ -1,5 +1,3 @@
-# I have move to another userChrome, which doesn't have one line style minimal interface. So this repo may not update anytime soon. if i have time and look into it.
-
 <p align="center">
  
 <img src="./scrennshots/img0.png" alt="ScreenShot"/>
@@ -18,6 +16,9 @@ Forgot most of them, what make the difference from other
  - Hide Tab cross icon, shows when hover the tab
  - Now playing media icon adjust, shows along favicon
  - Floating navbar in center
+ - Icon change
+ - Hide most of the unnecessary items
+ - Many more don't remember
 
 ### Known Issues
 - dark and light mode doesn't work. [#2](https://github.com/farhanspace/Firefox-minimal.css/issues/2)
