@@ -20,10 +20,6 @@ Forgot most of them, what make the difference from other
  - Hide most of the unnecessary items
  - Many more don't remember
 
-### Known Issues
-- dark and light mode doesn't work. [#2](https://github.com/farhanspace/Firefox-minimal.css/issues/2)
-- after 132.b01 update the newtab plus icon disappear. [#1](https://github.com/farhanspace/Firefox-minimal.css/issues/1)
-
  ## Installing
 Firstly enable the option `toolkit.legacyUserProfileCustomizations.stylesheets` from your `about:config` or `user.js` file.
 - Then open your profile folder (you can find the location in `about:profiles` root directory).
