@@ -6,6 +6,11 @@
 
 @import url(extraContents.css);
 
+:root{
+  --navbar-width: 500px;
+  --tab-max-width: 200px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root,
   body,
@@ -41,7 +46,7 @@
   /* Main container setup: fixed left column for URL bar, flexible right column for tabs */
   #navigator-toolbox {
     display: grid !important;
-    grid-template-columns: 500px 1fr; /* Left column fixed at 500px, right column fills remaining space */
+    grid-template-columns: var(--navbar-width) 1fr; /* 
     grid-template-rows: auto auto auto; /* Menubar, URL+tabs, bookmarks */
   }
 
@@ -164,10 +169,6 @@
 #nav-bar {
   box-shadow: none !important;
 }
-/* Private Mode toolbar Gradiant */
-/* [privatebrowsingmode="temporary"] #nav-bar {
-  background: linear-gradient(120deg, #000, #230b0e) !important;
-} */
 
 /* Hide urlbar placeholder text*/
 #urlbar-input::placeholder {
@@ -220,13 +221,6 @@ toolbarbutton#firefox-view-button {
 /* =====================================
    ! Tabbar adjustments 
    ===================================== */
-
-/* Remove gap after pinned tabs */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
-  > #tabbrowser-arrowscrollbox
-  > .tabbrowser-tab[first-visible-unpinned-tab] {
-  margin-inline-start: 0 !important;
-}
 
 /*  Cool animation on tab/bookmark icons  */
 .tabbrowser-tab:not([pinned]):not([selected])
@@ -287,6 +281,35 @@ toolbarbutton#firefox-view-button {
   display: -moz-box !important;
 }
 
+/* Tab size */
+.tabbrowser-tab {
+  &:not([pinned]) {
+    max-width: var(--tab-max-width); 
+  }
+}
+
+/* Remove margin after Pinned tab */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])[orient="horizontal"]
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  margin-inline-start: 2px !important;
+}
+
+/* Selected tab outline */
+.tab-background {
+  &:is([selected], [multiselected]) {
+    outline: 1.4px solid !important;
+  }
+}
+
+/* Tab border radius */
+#tabbrowser-tabs {
+  & .tab-background {
+    border-radius: 4px !important;
+  }
+}
+
+
 /* -------- Audio Tab Icon ----------------------------------- */
 
 .tab-icon-image,
@@ -308,19 +331,6 @@ toolbarbutton#firefox-view-button {
   border-radius: 10px !important;
 }
 
-/* Selected tab outline */
-.tab-background {
-  &:is([selected], [multiselected]) {
-    outline: 1.4px solid !important;
-  }
-}
-
-#tabbrowser-tabs {
-  & .tab-background {
-    border-radius: 6px !important;
-  }
-}
-
 /* =====================================
 ! Context Menu Adjustments 
 ===================================== */
@@ -329,7 +339,7 @@ toolbarbutton#firefox-view-button {
 
 /* Titlebar Context Menu */
 #tabContextMenu #context_openANewTab + menuseparator,
-/* #tabContextMenu #context_reloadTab, */
+/* #tabContextMenu #context_reloadTab, */  /* Reload Tab */
 #tabContextMenu .share-tab-url-item,
 #tabContextMenu #context_toggleMuteTab,
 #tabContextMenu #context_moveTabOptions,
@@ -346,7 +356,7 @@ toolbarbutton#firefox-view-button {
 #context-print-selection,
 #context-translate-selection,
 #frame-sep,
-#context-openlinkprivate,
+/* #context-openlinkprivate, */  /* Search in a Priavte Window */
 #context-openlink,
 #context-sendpagetodevice,
 #context-selectall,
@@ -403,7 +413,6 @@ menuitem {
 }
 
 /* -------- Context Menu Styling ----------------------------- */
-
 menupopup,
 panel {
   color-scheme: light dark;
@@ -458,4 +467,24 @@ menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
 
     z-index: -1;
   }
+}
+
+#star-button-box:has([starred="true"]) {
+  display: block !important;
+}
+#star-button-box {
+  display: none !important;
+}
+#unified-extensions-button {
+  padding-bottom: 2px !important;
+}
+
+/* =====================================
+! Private Mode Styling 
+===================================== */
+/* For private mode newtab styling go userContent.css */
+
+/* Private Mode toolbar Gradiant */
+[privatebrowsingmode="temporary"] #TabsToolbar {
+  background: linear-gradient(240deg, #75000f 20%, #000 100%) !important;
 }
