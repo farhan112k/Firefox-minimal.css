@@ -1,28 +1,18 @@
-<style>
-  .centered {
-    text-align: center;
-  }
-  .centered img {
-    display: block;
-    margin: auto;
-  }
-</style>
+<div align="center">
 
-<div class="centered">
-  <h3>General View</h3>
-  <img src="./scrennshots/general-view.png" alt="ScreenShot"/>
+### General View
+![ScreenShot](./scrennshots/general-view.png)
 
-  <h3>Floating Navigation</h3>
-  <img src="./scrennshots/floating-navigation.png" alt="ScreenShot of Floating navbar"/>
+### Floating Navigation
+![ScreenShot of Floating navbar](./scrennshots/floating-navigation.png)
 
-  <h3>Audio Icon</h3>
-  <img src="./scrennshots/audio-icon.png" alt="ScreenShot of media icon in tab"/>
-  
-  <h3>Private Mode</h3>
-  <img src="./scrennshots/private-mode.png" alt="Private mode image"/>
+### Audio Icon
+![ScreenShot of media icon in tab](./scrennshots/audio-icon.png)
+
+### Private Mode
+![Private mode image](./scrennshots/private-mode.png)
+
 </div>
-
-
 
 
 # Firefox-minimal.css
