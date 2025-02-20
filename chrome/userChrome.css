@@ -215,8 +215,19 @@ toolbar .toolbaritem-combined-buttons {
 toolbarbutton#unified-extensions-button,
 toolbarbutton#developer-button,
 toolbarbutton#firefox-view-button {
-  margin-inline: -1px !important;
+  margin-inline: 0px !important;
 }
+
+#star-button-box:has([starred="true"]) {
+  display: block !important;
+}
+#star-button-box {
+  display: none !important;
+}
+#unified-extensions-button {
+  padding-bottom: 3px !important;
+}
+
 
 /* =====================================
    ! Tabbar adjustments 
@@ -467,16 +478,6 @@ menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
 
     z-index: -1;
   }
-}
-
-#star-button-box:has([starred="true"]) {
-  display: block !important;
-}
-#star-button-box {
-  display: none !important;
-}
-#unified-extensions-button {
-  padding-bottom: 2px !important;
 }
 
 /* =====================================
