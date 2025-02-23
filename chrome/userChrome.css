@@ -204,14 +204,16 @@
 
 /* margin around extension */
 toolbar .toolbaritem-combined-buttons {
-  margin-inline: 0px !important;
+  margin-inline: -1px !important;
 }
 
 /* remove extra margin from my used toolbar button */
+toolbarbutton#downloads-button,
 toolbarbutton#unified-extensions-button,
 toolbarbutton#developer-button,
-toolbarbutton#firefox-view-button {
-  margin-inline: 0px !important;
+toolbarbutton#firefox-view-button,
+toolbarbutton#sidebar-button {
+  margin-inline: -2px !important;
 }
 
 #star-button-box:has([starred="true"]) {
@@ -221,7 +223,7 @@ toolbarbutton#firefox-view-button {
   display: none !important;
 }
 #unified-extensions-button {
-  padding-bottom: 3px !important;
+  padding-bottom: 1.6px !important;
 }
 
 
