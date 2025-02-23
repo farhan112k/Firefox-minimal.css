@@ -8,7 +8,6 @@
 
 :root{
   --navbar-width: 500px;
-  --tab-max-width: 200px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -112,9 +111,6 @@
 #forward-button {
   list-style-image: var(--forward-icon) !important;
 }
-#bookmarks-menu-button {
-  list-style-image: var(--bookmark-menu-icon-0) !important;
-}
 .tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"]
 {
   content: var(--extension-icon) !important;
@@ -208,14 +204,16 @@
 
 /* margin around extension */
 toolbar .toolbaritem-combined-buttons {
-  margin-inline: 0px !important;
+  margin-inline: -1px !important;
 }
 
 /* remove extra margin from my used toolbar button */
+toolbarbutton#downloads-button,
 toolbarbutton#unified-extensions-button,
 toolbarbutton#developer-button,
-toolbarbutton#firefox-view-button {
-  margin-inline: 0px !important;
+toolbarbutton#firefox-view-button,
+toolbarbutton#sidebar-button {
+  margin-inline: -2px !important;
 }
 
 #star-button-box:has([starred="true"]) {
@@ -225,35 +223,13 @@ toolbarbutton#firefox-view-button {
   display: none !important;
 }
 #unified-extensions-button {
-  padding-bottom: 3px !important;
+  padding-bottom: 1.6px !important;
 }
 
 
 /* =====================================
    ! Tabbar adjustments 
    ===================================== */
-
-/*  Cool animation on tab/bookmark icons  */
-.tabbrowser-tab:not([pinned]):not([selected])
-  .bookmark-item
-  .toolbarbutton-icon {
-  opacity: 0 !important;
-  transition: 0.15s !important;
-  width: 0 !important;
-  padding-left: 16px !important;
-}
-
-.tabbrowser-tab:not([pinned]):hover .bookmark-item:hover .toolbarbutton-icon {
-  opacity: 100 !important;
-  transition: 0.15s !important;
-  display: inline-block !important;
-  width: 16px !important;
-  padding-left: 0 !important;
-}
-
-.tabbrowser-tab:not([hover]) .bookmark-item:not([hover]) .toolbarbutton-icon {
-  padding-left: 0 !important;
-}
 
 /*  X-button on the tabs  */
 .tabbrowser-tab:not(:hover) .tab-close-button {
@@ -282,21 +258,6 @@ toolbarbutton#firefox-view-button {
   background: none !important;
   cursor: pointer;
   display: -moz-box !important;
-}
-
-.tab-close-button[selected]:hover {
-  opacity: 100% !important;
-  transition: 0.3s !important;
-  background: none !important;
-  cursor: pointer;
-  display: -moz-box !important;
-}
-
-/* Tab size */
-.tabbrowser-tab {
-  &:not([pinned]) {
-    max-width: var(--tab-max-width); 
-  }
 }
 
 /* Remove margin after Pinned tab */
