@@ -233,28 +233,6 @@ toolbarbutton#firefox-view-button {
    ! Tabbar adjustments 
    ===================================== */
 
-/*  Cool animation on tab/bookmark icons  */
-.tabbrowser-tab:not([pinned]):not([selected])
-  .bookmark-item
-  .toolbarbutton-icon {
-  opacity: 0 !important;
-  transition: 0.15s !important;
-  width: 0 !important;
-  padding-left: 16px !important;
-}
-
-.tabbrowser-tab:not([pinned]):hover .bookmark-item:hover .toolbarbutton-icon {
-  opacity: 100 !important;
-  transition: 0.15s !important;
-  display: inline-block !important;
-  width: 16px !important;
-  padding-left: 0 !important;
-}
-
-.tabbrowser-tab:not([hover]) .bookmark-item:not([hover]) .toolbarbutton-icon {
-  padding-left: 0 !important;
-}
-
 /*  X-button on the tabs  */
 .tabbrowser-tab:not(:hover) .tab-close-button {
   opacity: 0% !important;
@@ -277,14 +255,6 @@ toolbarbutton#firefox-view-button {
 }
 
 .tab-close-button:hover {
-  opacity: 100% !important;
-  transition: 0.3s !important;
-  background: none !important;
-  cursor: pointer;
-  display: -moz-box !important;
-}
-
-.tab-close-button[selected]:hover {
   opacity: 100% !important;
   transition: 0.3s !important;
   background: none !important;
