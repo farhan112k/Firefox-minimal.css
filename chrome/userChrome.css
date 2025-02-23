@@ -8,7 +8,6 @@
 
 :root{
   --navbar-width: 500px;
-  --tab-max-width: 200px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -260,13 +259,6 @@ toolbarbutton#firefox-view-button {
   background: none !important;
   cursor: pointer;
   display: -moz-box !important;
-}
-
-/* Tab size */
-.tabbrowser-tab {
-  &:not([pinned]) {
-    max-width: var(--tab-max-width); 
-  }
 }
 
 /* Remove margin after Pinned tab */
