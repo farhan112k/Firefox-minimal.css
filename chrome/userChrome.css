@@ -111,9 +111,6 @@
 #forward-button {
   list-style-image: var(--forward-icon) !important;
 }
-#bookmarks-menu-button {
-  list-style-image: var(--bookmark-menu-icon-0) !important;
-}
 .tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"]
 {
   content: var(--extension-icon) !important;
