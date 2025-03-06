@@ -23,6 +23,10 @@
   }
   /* Private Background color change */
   html.private {
-    background-color: #230b0e !important;
+    background: linear-gradient(
+      to left bottom,
+      #75000f 0%,
+      #000 50%
+    ) !important;
   }
 }

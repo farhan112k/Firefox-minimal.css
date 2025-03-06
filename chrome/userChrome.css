@@ -1,5 +1,5 @@
 /* Oneliner */
-/* version: 135 */
+/* version: 136 */
 /* url: https://github.com/farhan-112k/firefox-minimal */
 
 /* Based on "Black by XI" theme, should work on any theme dark or light */
@@ -41,39 +41,37 @@
    ! Oneline Style
    ===================================== */
 
-@media (min-width: 1000px) {
   /* Main container setup: fixed left column for URL bar, flexible right column for tabs */
+@media (min-width: 1000px) {
   #navigator-toolbox {
     display: grid !important;
-    grid-template-columns: var(--navbar-width) 1fr; /* 
-    grid-template-rows: auto auto auto; /* Menubar, URL+tabs, bookmarks */
+    grid-template-columns: var(--navbar-width) 1fr;
   }
 
   /* Toolbar arrangement */
   #toolbar-menubar {
     grid-row: 1;
-    grid-column: 1 / -1; /* Span full width */
+    grid-column: 1 / -1;
   }
 
   #nav-bar {
     grid-row: 2;
     grid-column: 1;
     width: 100% !important;
-    /* Remove max-width if the grid column is fixed */
   }
 
   #TabsToolbar {
     grid-row: 2;
     grid-column: 2;
     width: 100% !important;
-    min-width: 0; /* Allow shrinking */
-    pointer-events: auto !important; /* Ensure it's clickable */
-    z-index: 1; /* Bring above any overlapping elements if needed */
+    min-width: 0;
+    pointer-events: auto !important;
+    z-index: 1;
   }
 
   #PersonalToolbar {
     grid-row: 3;
-    grid-column: 1 / -1; /* Span full width */
+    grid-column: 1 / -1;
   }
 
   /* Fix for tab overflow */
@@ -92,11 +90,11 @@
 /* Make the URL bar container flexible so it can shrink if more extensions appear */
 #urlbar-container {
   display: flex !important;
-  flex: 1 1 auto !important; /* Allow growing and shrinking */
-  min-width: 0 !important; /* Prevent content overflow from forcing a minimum width */
-  max-width: none !important; /* Remove any fixed maximum */
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
   width: auto !important;
-  align-items: center !important; /* Vertically center the items */
+  align-items: center !important;
 }
 
 /*--------- Icon Change ---------------------------------------*/
@@ -159,9 +157,11 @@
 
 /* -------- Aesthetics --------------------------------------- */
 
+/* Hide the line under navigation toolbar */
 #navigator-toolbox {
   border-bottom: none !important;
 }
+/*Hide shadow around the url bar */
 #nav-bar {
   box-shadow: none !important;
 }
@@ -180,7 +180,7 @@
 #PanelUI-menu-button {
   padding: 0px !important;
 }
-
+/* tiny part of menu for clicking  */
 #PanelUI-menu-button .toolbarbutton-icon {
   width: 1px !important;
 }
@@ -202,6 +202,11 @@
   background: #0000 !important;
 }
 
+/*  extra padding before input text*/
+.urlbar-input-box {
+  padding-left: 10px !important;
+}
+
 /* margin around extension */
 toolbar .toolbaritem-combined-buttons {
   margin-inline: -1px !important;
@@ -216,12 +221,14 @@ toolbarbutton#sidebar-button {
   margin-inline: -2px !important;
 }
 
+/* Bookmark icon visiable only for boookmarked page */
 #star-button-box:has([starred="true"]) {
   display: block !important;
 }
 #star-button-box {
   display: none !important;
 }
+/* Fix extra padding for extension icon */
 #unified-extensions-button {
   padding-bottom: 1.6px !important;
 }
@@ -283,8 +290,9 @@ toolbarbutton#sidebar-button {
 
 
 /* -------- Audio Tab Icon ----------------------------------- */
+/* v136 don't need this anymore  */
 
-.tab-icon-image,
+/* .tab-icon-image,
 .tab-throbber {
   opacity: 1 !important;
 }
@@ -301,7 +309,7 @@ toolbarbutton#sidebar-button {
 .tab-icon-overlay:not([crashed]):hover {
   background-color: var(--tab-icon-overlay-stroke, black) !important;
   border-radius: 10px !important;
-}
+} */
 
 /* =====================================
 ! Context Menu Adjustments 
