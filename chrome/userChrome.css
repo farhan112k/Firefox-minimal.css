@@ -1,5 +1,5 @@
 /* Oneliner */
-/* version: 135 */
+/* version: 136 */
 /* url: https://github.com/farhan-112k/firefox-minimal */
 
 /* Based on "Black by XI" theme, should work on any theme dark or light */
@@ -290,8 +290,9 @@ toolbarbutton#sidebar-button {
 
 
 /* -------- Audio Tab Icon ----------------------------------- */
+/* v136 don't need this anymore  */
 
-.tab-icon-image,
+/* .tab-icon-image,
 .tab-throbber {
   opacity: 1 !important;
 }
@@ -308,7 +309,7 @@ toolbarbutton#sidebar-button {
 .tab-icon-overlay:not([crashed]):hover {
   background-color: var(--tab-icon-overlay-stroke, black) !important;
   border-radius: 10px !important;
-}
+} */
 
 /* =====================================
 ! Context Menu Adjustments 
