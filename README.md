@@ -38,7 +38,7 @@ Minimalistic ***oneliner*** firefox userChrome.css. Focus on keyboard shortcuts.
 - This should work with any theme and density in Firefox.
 - It meant for `compact density` (enbale `browser.compactmode.show` to `true` in `about:config`)
 
-> the `user.js`same user.js from [betterfox](https://github.com/yokoffing/Betterfox)
+> the `user.js` same user.js from [betterfox](https://github.com/yokoffing/Betterfox)
 
 ## Contribution Guidelines
 
