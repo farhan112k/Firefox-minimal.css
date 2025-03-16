@@ -274,21 +274,6 @@ toolbarbutton#sidebar-button {
   margin-inline-start: 2px !important;
 }
 
-/* Selected tab outline */
-.tab-background {
-  &:is([selected], [multiselected]) {
-    outline: 1.4px solid !important;
-  }
-}
-
-/* Tab border radius */
-#tabbrowser-tabs {
-  & .tab-background {
-    border-radius: 4px !important;
-  }
-}
-
-
 /* -------- Audio Tab Icon ----------------------------------- */
 /* v136 don't need this anymore  */
 
