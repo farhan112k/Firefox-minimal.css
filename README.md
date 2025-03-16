@@ -20,21 +20,25 @@
 Minimalistic ***oneliner*** firefox userChrome.css. Focus on keyboard shortcuts.
 
 ## Changes
-Forgot most of them, what make the difference from other
+
  - Hide some context menu item
  - Hide Tab cross icon, shows when hover the tab
- - Now playing audio icon adjust, shows along favicon
+ - Now playing audio icon adjust, shows along favicon ( *don't need for firefox v136+* )
  - Floating navbar in center
- - Icon change
+ - Few default icon change ( *backward, forward, extension, etc* ) 
  - Hide most of the unnecessary items
- - Many more don't remember
+ - And many more
 
  ## Installing
-Firstly enable the option `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` from your `about:config` or `user.js` file.
+ 
+ Firstly write `about:config` urlbar  and enable `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
+
 - Then open your profile folder (you can find the location in `about:profiles` root directory).
 - Copy `chrome` folder to that root directory.
 - This should work with any theme and density in Firefox.
 - It meant for `compact density` (enbale `browser.compactmode.show` to `true` in `about:config`)
+
+> the `user.js`same user.js from [betterfox](https://github.com/yokoffing/Betterfox)
 
 ## Keyboard Shortcuts
 Shortcuts for general use
