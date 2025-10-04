@@ -275,7 +275,7 @@ toolbarbutton#sidebar-button {
 }
 
 /* -------- Audio Tab Icon ----------------------------------- */
-/* v136 don't need this anymore  */
+/* v136+ don't need this anymore  */
 
 /* .tab-icon-image,
 .tab-throbber {
@@ -300,52 +300,185 @@ toolbarbutton#sidebar-button {
 ! Context Menu Adjustments 
 ===================================== */
 
-/*Refer to SMW for an all in one place reference-library: https://github.com/stonecrusher/simpleMenuWizard */
-
-/* Titlebar Context Menu */
+/* ===== Titlebar Context Menu ===== */
+/* #tabContextMenu #context_openANewTab, */                  /* New Tab to Right */
 #tabContextMenu #context_openANewTab + menuseparator,
-/* #tabContextMenu #context_reloadTab, */  /* Reload Tab */
-#tabContextMenu .share-tab-url-item,
-#tabContextMenu #context_toggleMuteTab,
-#tabContextMenu #context_moveTabOptions,
-#tabContextMenu #context_closeDuplicateTabs,
-#tabContextMenu #context_duplicateTab,
-#tabContextMenu #context_duplicateTabs,
-#tabContextMenu #context_bookmarkSelectedTab {
+/* #tabContextMenu #context_moveTabToNewGroup, */            /* Add Tab to New Group */
+/* #tabContextMenu #context_moveTabToGroup, */               /* Add Tab to Group */
+/* #tabContextMenu #context_moveTabToGroupPopupMenu, */      /* (submenu) */
+/* #tabContextMenu #context_moveTabToGroupNewGroup, */       /* New Group */
+/* #tabContextMenu #context_moveTabToSavedGroup, */          /* Closed Groups */
+/* #tabContextMenu #context_moveTabToSavedGroupPopupMenu, */ /* (submenu) */
+/* #tabContextMenu #context_ungroupTab, */                   /* Remove from Groups */
+/* #tabContextMenu #context_reloadTab, */                    /* Reload Tab */
+/* #tabContextMenu #context_reloadSelectedTabs, */           /* Reload Tabs */
+/* #tabContextMenu #context_playTab, */                      /* Play Tab */
+/* #tabContextMenu #context_playSelectedTabs, */             /* Play Tabs */
+#tabContextMenu #context_toggleMuteTab,                      /* Mute Tab */
+/* #tabContextMenu #context_toggleMuteSelectedTabs, */       /* Mute Tabs */
+/* #tabContextMenu #context_pinTab, */                       /* Pin Tab */
+/* #tabContextMenu #context_unpinTab, */                     /* Unpin Tab */
+/* #tabContextMenu #context_pinSelectedTabs, */              /* Pin Tabs */
+/* #tabContextMenu #context_unpinSelectedTabs, */            /* Unpin Tabs */
+/* #tabContextMenu #context_unloadTab, */                    /* Unload Tab */
+#tabContextMenu #context_duplicateTab,                       /* Duplicate Tab */
+#tabContextMenu #context_duplicateTabs,                      /* Duplicate Tabs */
+/* #tabContextMenu #context_askChat, */                      /* Ask an AI Chatbot */
+/* #tabContextMenu #context_bookmarkSelectedTabs, */         /* Bookmark Tabs… */
+#tabContextMenu #context_bookmarkSelectedTab,                /* Bookmark Tabs… */
+/* #tabContextMenu #context_bookmarkTab, */                  /* Bookmark Tab… */
+#tabContextMenu .share-tab-url-item,                          /* Share */ 
+#tabContextMenu #context_moveTabOptions,                     /* Move Tab */
+/* #tabContextMenu #moveTabOptionsMenu, */                   /* (submenu) */
+/* #tabContextMenu #context_moveToStart, */                  /* Move to Start */
+/* #tabContextMenu #context_moveToEnd, */                    /* Move to End */
+/* #tabContextMenu #context_openTabInWindow, */              /* Move to New Window */
+/* #tabContextMenu #context_sendTabToDevice, */              /* Send Tab to Device */
+/* #tabContextMenu #context_sendTabToDevicePopupMenu, */     /* (submenu) */
+/* #tabContextMenu #context_reopenInContainer, */            /* Open in New Container Tab */
+/* #tabContextMenu #context_reopenInContainerPopupMenu, */   /* (submenu) */
+/* #tabContextMenu #context_selectAllTabs, */                /* Select All Tabs */
+/* #tabContextMenu #context_closeTab, */                     /* Close Tab */
+#tabContextMenu #context_closeDuplicateTabs                  /* Close Duplicate Tabs */
+/* #tabContextMenu #context_closeTabOptions, */              /* Close Multiple Tabs */
+/* #tabContextMenu #closeTabOptions, */                      /* (submenu) */
+/* #tabContextMenu #context_closeTabsToTheStart, */          /* Close Tabs to Left */
+/* #tabContextMenu #context_closeTabsToTheEnd, */            /* Close Tabs to Right */
+/* #tabContextMenu #context_closeOtherTabs, */               /* Close Other Tabs */
+/* #tabContextMenu #context_undoCloseTab, */                 /* Reopen Closed Tab */
+/* #tabContextMenu #context_fullscreenAutohide, */           /* Hide Toolbars */
+/* #tabContextMenu #context_fullscreenExit, */               /* Exit Full Screen Mode */
+{
   display: none !important;
 }
 
-/* Website Context Menu */
-#context-bookmarklink,
-#context-stripOnShareLink,
-#context-print-selection,
-#context-translate-selection,
-#frame-sep,
-/* #context-openlinkprivate, */  /* Search in a Priavte Window */
-#context-openlink,
-#context-sendpagetodevice,
-#context-selectall,
-#context-take-screenshot,
-#context-sep-screenshots,
-#context-pocket,
-#context-savelinktopocket,
-#context-setDesktopBackground,
-#context-sep-setbackground,
-#contextseperator-4,
-#context-sendimage,
-#context-viewimageinfo,
-#context-inspect-a11y,
-menuitem[label="Manage all masks"],
-.menu-iconic[label="Firefox Relay"],
-menuitem[label="Download with IDM"] {
-  display: none !important;
-}
-
-/* Video Link Context Menu */
+/* ===== Website Context Menu ===== */
+/* #context-back, */                    /* Back */
+/* #context-forward, */                 /* Forward */
+/* #context-reload, */                  /* Reload */
+/* #context-stop, */                    /* Stop */
+/* #context-bookmarkpage, */            /* Bookmark Page… */
+/* #context-sep-navigation, */          /* Navigation separator */
+/* #context-viewsource-goToLine, */     /* Go to Line */
+/* #context-viewsource-wrapLongLines, */ /* Wrap Long Lines */
+/* #context-viewsource-highlightSyntax, */ /* Highlight Syntax */
+/* #context-sep-viewsource-commands, */ /* View Source commands separator */
+/* #spell-no-suggestions, */            /* No Spelling Suggestions */
+/* #spell-add-to-dictionary, */         /* Add to Dictionary */
+/* #spell-undo-add-to-dictionary, */    /* Undo Add To Dictionary */
+/* #spell-suggestions-separator, */     /* Spell suggestions separator */
+/* #context-openlinkincurrent, */       /* Open Link */
+/* #context-openlinkincontainertab, */  /* Open Link in New Tab */
+/* #context-openlinkintab, */           /* Open Link in New Tab */
+/* #context-openlinkinusercontext-menu, */ /* Open Link in New Container Tab */
+#context-openlink,                     /* Open Link in New Window */
+/* #context-openlinkprivate, */         /* Open Link in New Private Window */
+/* #context-previewlink, */             /* Preview Link */
+/* #context-sep-open, */                /* Open separator */
+#context-bookmarklink,                 /* Bookmark Link… */
+/* #context-savelink, */                /* Save Link As… */
+/* #context-copyemail, */               /* Copy Email Address */
+/* #context-copyphone, */               /* Copy Phone Number */
+/* #context-copylink, */                /* Copy Link */
+#context-stripOnShareLink,             /* Copy Clean Link */
+/* #context-sendlinktodevice, */        /* Send Link to Device */
+/* #context-sep-sendlinktodevice, */    /* Send to device separator */
+/* #context-sep-copylink, */            /* Copy link separator */
+/* #context-media-play, */              /* Play */
+/* #context-media-pause, */             /* Pause */
+/* #context-media-mute, */              /* Mute */
+/* #context-media-unmute, */            /* Unmute */
+/* #context-media-playbackrate, */      /* Speed */
+/* #context-media-loop, */              /* Loop */
+/* #context-leave-dom-fullscreen, */    /* Exit Full Screen */
+/* #context-video-fullscreen, */        /* Full Screen */
+/* #context-media-hidecontrols, */      /* Hide Controls */
+/* #context-media-showcontrols, */      /* Show Controls */
+/* #context-media-sep-video-commands, */ /* Video commands separator */
+/* #context-viewvideo, */               /* Open Video in New Tab */
+/* #context-video-pictureinpicture, */  /* Watch in Picture-in-Picture */
+/* #context-media-sep-commands, */      /* Media commands separator */
+/* #context-reloadimage, */             /* Reload Image */
+/* #context-viewimage, */               /* Open Image in New Tab */
+/* #context-saveimage, */               /* Save Image As… */
+#context-video-saveimage,              /* Take Snapshot… */
+/* #context-savevideo, */               /* Save Video As… */
+/* #context-saveaudio, */               /* Save Audio As… */
+/* #context-copyimage-contents, */      /* Copy Image */
+/* #context-copyimage, */               /* Copy Image Link */
+/* #context-copyvideourl, */            /* Copy Video Link */
+/* #context-copyaudiourl, */            /* Copy Audio Link */
+#context-sendimage,                    /* Email Image… */
+#context-viewimageinfo,                /* View Image Info */
+/* #context-viewimagedesc, */           /* View Description */
+/* #context-visual-search, */           /* Visual Search */
+#context-sep-setbackground,            /* Set background separator */
+#context-setDesktopBackground,         /* Set Image as Desktop Background… */
+/* #context-sep-sharing, */             /* Sharing separator */
+/* #context-savepage, */                /* Save Page As… */
+#context-sendpagetodevice,             /* Send Page to Device */
+/* #fill-login, */                      /* Fill login */
+/* #fill-login-generated-password, */   /* Suggest Strong Password… */
+/* #use-relay-mask, */                  /* Use Relay Email Mask */
+/* #manage-saved-logins, */             /* Manage Passwords */
+/* #passwordmgr-items-separator, */     /* Password manager separator */
+/* #context-undo, */                    /* Undo */
+/* #context-redo, */                    /* Redo */
+/* #context-sep-redo, */                /* Redo separator */
+/* #context-cut, */                     /* Cut */
+/* #context-copy, */                    /* Copy */
+/* #context-paste, */                   /* Paste */
+/* #context-paste-no-formatting, */     /* Paste Without Formatting */
+/* #context-delete, */                  /* Delete */
+#context-selectall,                    /* Select All */
+/* #context-pdfjs-comment-selection, */ /* Comment Selection */
+/* #context-pdfjs-highlight-selection, */ /* Highlight Selection */
+/* #context-reveal-password, */         /* Reveal Password */
+#context-print-selection,              /* Print Selection… */
+/* #context-sep-selectall, */           /* Select all separator */
+/* #context-copy-link-to-highlight, */  /* Copy Link to Highlight */
+/* #context-copy-clean-link-to-highlight, */ /* Copy Clean Link to Highlight */
+/* #context-remove-highlight, */        /* Remove Highlight */
+/* #context-sep-highlights, */          /* Highlights separator */
+/* #context-pdfjs-undo, */              /* Undo */
+/* #context-pdfjs-redo, */              /* Redo */
+/* #context-sep-pdfjs-redo, */          /* PDF.js redo separator */
+/* #context-pdfjs-cut, */               /* Cut */
+/* #context-pdfjs-copy, */              /* Copy */
+/* #context-pdfjs-paste, */             /* Paste */
+/* #context-pdfjs-delete, */            /* Delete */
+/* #context-pdfjs-selectall, */         /* Select All */
+/* #context-sep-pdfjs-selectall, */     /* PDF.js select all separator */
+#context-take-screenshot,              /* Take Screenshot */
+#context-sep-screenshots,              /* Screenshots separator */
+/* #context-keywordfield, */            /* Add a Keyword for this Search… */
+/* #context-add-engine, */              /* Add Search Engine */
+/* #context-searchselect, */            /* Search Google for selection */
+/* #context-searchselect-private, */    /* Search with DuckDuckGo in a Private Window */
+#context-translate-selection,          /* Translate Link Text to English */
+/* #context-ask-chat, */                /* Ask an AI Chatbot */
+#frame-sep,                           /* Frame separator */
+/* #frame, */                          /* This Frame */
+/* #spell-separator, */                /* Spell separator */
+/* #spell-check-enabled, */            /* Check Spelling */
+/* #spell-add-dictionaries-main, */    /* Add Dictionaries… */
+/* #spell-dictionaries, */             /* Languages */
+/* #context-sep-bidi, */               /* Bidi separator */
+/* #context-bidi-text-direction-toggle, */ /* Switch Text Direction */
+/* #context-bidi-page-direction-toggle, */ /* Switch Page Direction */
+/* #inspect-separator, */              /* Inspect separator */
+/* #context-viewpartialsource-selection, */ /* View Selection Source */
+/* #context-viewsource, */             /* View Page Source */
+#context-inspect-a11y,                /* Inspect Accessibility Properties */
+/* #context-inspect, */                /* Inspect */
+/* #context-media-eme-separator, */    /* Media EME separator */
+/* #context-media-eme-learnmore, */    /* Learn more about DRM… */
 #context-sendvideo,
 #context-sendvideourl,
-#context-savevideo,
-#context-video-saveimage {
+.menu-iconic[label="Firefox Relay"],
+menuitem[label="Manage all masks"],
+menuitem[label="Download with IDM"]
+{
   display: none !important;
 }
 
