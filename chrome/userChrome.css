@@ -477,7 +477,7 @@ toolbarbutton#sidebar-button {
 /* #context-viewsource, */             /* View Page Source */
 #context-inspect-a11y,                /* Inspect Accessibility Properties */
 /* #context-inspect, */                /* Inspect */
-/* #context-media-eme-separator, */    /* Media EME separator */
+#context-media-eme-separator,         /* Media EME separator */
 /* #context-media-eme-learnmore, */    /* Learn more about DRM… */
 #context-sendvideo,
 #context-sendvideourl,
