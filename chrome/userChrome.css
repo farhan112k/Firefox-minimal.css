@@ -520,7 +520,7 @@ menuitem {
 menupopup,
 panel {
   color-scheme: light dark;
-  --panel-background: var(--uc-background-color) !important;
+  --panel-background-color: var(--uc-background-color) !important;
   --panel-color: var(--uc-text-color) !important;
   --panel-border-radius: var(--uc-border-radius) !important;
   --panel-border-color: var(--uc-border-color) !important;
