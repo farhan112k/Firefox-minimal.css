@@ -274,6 +274,12 @@ toolbarbutton#sidebar-button {
   margin-inline-start: 2px !important;
 }
 
+/* Tabs border radius */
+.tab-background {
+  /* default 8px */
+  border-radius: 6px !important;
+}
+
 /* -------- Audio Tab Icon ----------------------------------- */
 /* v136+ don't need this anymore  */
 
