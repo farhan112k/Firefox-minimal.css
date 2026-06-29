@@ -177,13 +177,13 @@
 }
 
 /* Hide the hamburger menu */
-#PanelUI-menu-button {
+/* #PanelUI-menu-button {
   padding: 0px !important;
-}
+} */
 /* tiny part of menu for clicking  */
-#PanelUI-menu-button .toolbarbutton-icon {
+/* #PanelUI-menu-button .toolbarbutton-icon {
   width: 1px !important;
-}
+} */
 
 #PanelUI-menu-button .toolbarbutton-badge-stack {
   padding: 0px !important;
